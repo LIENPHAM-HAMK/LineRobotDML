@@ -1,0 +1,47 @@
+// Create a thread to handle obstacle detection
+        Thread obstacleThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (!Button.ESCAPE.isDown()) {
+                    distanceProvider.fetchSample(distanceSample, 0);
+                    float distance = distanceSample[0];
+
+                    // Display distance on screen
+                    LCD.clear();
+                    LCD.drawString("Dist: " + distance, 0, 0);
+
+                    // If obstacle detected, stop and spin to avoid
+                    if (distance < CRITICAL_DISTANCE) {
+                        Motor.A.stop(true);
+                        Motor.B.stop();
+
+                        // Simple avoidance: spin in place
+                        Motor.A.rotate(-ROTATE_ANGLE, true);
+                        Motor.B.rotate(ROTATE_ANGLE);
+                        Delay.msDelay(1000); // spin for 1 second
+
+                        // Resume normal speed and forward motion
+                        Motor.A.setSpeed(BASE_SPEED);
+                        Motor.B.setSpeed(BASE_SPEED);
+                        Motor.A.forward();
+                        Motor.B.forward();
+                    }
+                    else if (distance < SLOW_DISTANCE) {
+                        // Obstacle nearby, slow down
+                        Motor.A.setSpeed(SLOW_SPEED);
+                        Motor.B.setSpeed(SLOW_SPEED);
+                    }
+                    else {
+                        // No obstacle, move at normal speed
+                        Motor.A.setSpeed(BASE_SPEED);
+                        Motor.B.setSpeed(BASE_SPEED);
+                    }
+
+                    Delay.msDelay(100);
+                }
+            }
+        });
+
+        // Start the thread
+        obstacleThread.setDaemon(true);
+        obstacleThread.start();
