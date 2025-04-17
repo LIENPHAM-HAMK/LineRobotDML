@@ -1,0 +1,4 @@
+# CODEOWNERS
+* @Shanipiyadasa @krempovskyy @LIENPHAM-HAMK
+/docs/ @Shanipiyadasa @krempovskyy @LIENPHAM-HAMK
+/src/ @krempovskyy @LIENPHAM-HAMK @Shanipiyadasa
