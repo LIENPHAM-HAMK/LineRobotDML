@@ -1,0 +1,44 @@
+package testti;
+
+import lejos.hardware.motor.Motor;
+import lejos.hardware.Button;
+import lejos.hardware.lcd.LCD;
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3ColorSensor;
+import lejos.hardware.sensor.EV3UltrasonicSensor;
+import lejos.robotics.SampleProvider;
+import lejos.utility.Delay;
+
+/**
+ * LineFollowerRobot demonstrates a simple line following robot with object detection.
+ */
+public class LineRobot {
+
+    // Define sensor and motor settings
+    private static final float CRITICAL_DISTANCE = 0.15f; // 15 cm
+    private static final int BASE_SPEED = 200;
+    private static final int TURN_SPEED = 100;
+
+    public static void main(String[] args)  {
+
+        // Initialize color and ultrasonic sensors
+        final EV3ColorSensor colorSensor = new EV3ColorSensor(SensorPort.S1);
+        final EV3UltrasonicSensor ultrasonicSensor = new EV3UltrasonicSensor(SensorPort.S2);
+
+        // Fetch color sensor in black mode (for line intensity)
+        final SampleProvider colorProvider = colorSensor.getRedMode();
+        final float[] colorSample = new float[colorProvider.sampleSize()];
+
+        // Fetch ultrasonic sensor in distance mode
+        final SampleProvider distanceProvider = ultrasonicSensor.getDistanceMode();
+        final float[] distanceSample = new float[distanceProvider.sampleSize()];
+
+        // Set initial motor speed
+        Motor.A.setSpeed(BASE_SPEED);
+        Motor.B.setSpeed(BASE_SPEED);
+
+        // Start forward movement
+        Motor.A.forward();
+        Motor.B.forward();
+}
+}
