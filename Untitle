@@ -1,0 +1,7 @@
+setSpeed()      //degrees/sec           RANGE: 0-900
+setPower()      //power percentage      RANGE: 0-100$
+
+Motor.A.setSpeed(200);
+Motor.A.setPower(75);
+
+Motor.B.
