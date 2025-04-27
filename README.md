@@ -72,6 +72,15 @@ Threads are using shared variables to immediately see changes.
 
 The generated documentation will be available in the `docs` folder.
 
+## Folder Structure
+
+The workspace contains two folders by default, where:
+
+- `src`: the folder to maintain sources
+- `lib`: the folder to maintain dependencies
+
+Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+
 ## Project Time Line
 
 ![sd_group_9_dml_2025-04-16_06 42pm](https://github.com/user-attachments/assets/7a898c34-cb2b-425c-b4ac-4027b5753b97)
