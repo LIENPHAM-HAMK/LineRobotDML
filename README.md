@@ -1,5 +1,6 @@
 # LEGO EV3 Line Robot - Group 9 DML
-Line Robot follower
+
+
 ## Lego EV3 Line Robot 
 ## Project Summary 
 
