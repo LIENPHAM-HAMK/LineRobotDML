@@ -33,11 +33,11 @@ git clone https://github.com/
 
 ## Usage
 
-> Make sure your Lego EV3 robot is powered on. <br>
-> Run the complie.bat and process.bat in VS code <br>
-> Upload the .jar file in the console <br>
-> Run the uploaded .jar file <br>
-> The robot will start following the track and detecting the objects, and perform the avoidance maneuvers. <br>
+1. Make sure your Lego EV3 robot is powered on. <br>
+2. Run the complie.bat and process.bat in VS code <br>
+3. Upload the .jar file in the console <br>
+4. Run the uploaded .jar file <br>
+5. The robot will start following the track and detecting the objects, and perform the avoidance maneuvers. <br>
 
 ## Sensors and Motors 
 > Ultrasonic Sensors : used for Object Detection <br>
