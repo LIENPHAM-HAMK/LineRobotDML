@@ -52,6 +52,15 @@ git clone https://github.com/LIENPHAM-HAMK/LineRobotDML.git
 > Color Sensor       : Detects the line and changes in light intensity <br>
 > Motors             : Control the movement of the Robot <br>
 
+### Line Following 
+The robot uses timing and sensor data to stay on the line and navigation obtracles. 
+
+### Object Detection & Avoidance
+The robot detects objects and avoids them by turning and returning to the line. 
+
+
+### Thread Communication  
+Threads are used for managing sensor readings, and motor control concurrently. Communication between threads is handled suing shared variables and synchronization. 
 
 ## Project Time Line 
 ![sd_group_9_dml_2025-04-16_06 42pm](https://github.com/user-attachments/assets/7a898c34-cb2b-425c-b4ac-4027b5753b97)
