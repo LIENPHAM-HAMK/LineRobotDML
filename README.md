@@ -25,13 +25,14 @@ The project emphazises both collaborative development and technical implementati
 1.  Install LeJOS Follow the Installation guide.   <br> 
 2. Clone the repository <br> 
 ```bash <br>
-git clone https://github.com/              <br>
+git clone https://github.com/              
 ```                                    
 3. Connect Lego EV3 to your computer <br>
 4. Complie and upload code to EV3 using the LeJOS development tools. <br> 
 
 
 ## Usage
+
 > Make sure your Lego EV3 robot is powered on. <br>
 > Run the complie.bat and process.bat in VS code <br>
 > Upload the .jar file in the console <br>
@@ -39,9 +40,9 @@ git clone https://github.com/              <br>
 > The robot will start following the track and detecting the objects, and perform the avoidance maneuvers. <br>
 
 ## Sensors and Motors 
-> Ultrasonic Sensors : used for Object Detection
-> Color Sensor       : Detects the line and changes in light intensity
-> Motors             : Control the movement of the Robot
+> Ultrasonic Sensors : used for Object Detection <br>
+> Color Sensor       : Detects the line and changes in light intensity <br>
+> Motors             : Control the movement of the Robot <br>
 
 
 ## Project Time Line 
