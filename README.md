@@ -50,7 +50,7 @@ git clone https://github.com/LIENPHAM-HAMK/LineRobotDML.git
 ## Sensors and Motors 
 > Ultrasonic Sensors : used for Object Detection <br>
 > Color Sensor       : Detects the line and changes in light intensity <br>
-> Motors             : Control the movement of the Robot <br>
+> Motors             : Control the movement of the Robot <br> 1
 
 ### Line Following 
 The robot uses timing and sensor data to stay on the line and navigation obtracles. 
