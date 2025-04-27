@@ -25,7 +25,7 @@ The project emphazises both collaborative development and technical implementati
 1.  Install LeJOS Follow the Installation guide.   <br> 
 2. Clone the repository <br> 
 ```bash <br>
-git clone https://github.com/              
+git clone https://github.com/LIENPHAM-HAMK/LineRobotDML              
 ```                                    
 3. Connect Lego EV3 to your computer <br>
 4. Complie and upload code to EV3 using the LeJOS development tools. <br> 
