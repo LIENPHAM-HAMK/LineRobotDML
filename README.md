@@ -2,9 +2,16 @@
 Line Robot follower
 ## Lego EV3 Line Robot 
 ## Project Summary 
-This course focuses on advancing students understanding of Object Oriented Programming (OOP) through a hands-on, team based project. During the inital weeks, students engage in preparatory learning activities to strengthen our grasp of core OOP concepts. The primary practical assignemtn invoolves designing and develiping a Lego EV3 line follower robot using the LeJOS java platform. This project serves as a tagible and interactuve way to apply object-oriented principles, making concepts such as classes and objects more concrete. 
 
-The project emphazises both collaborative development and technical implementation, requiring teams to integrate various components including motors, color and ultrasonic sensors, and thread communication. key functionalities include line following, object detection and avoidance, and times navigation. 
+The Lego Line Follower Robot project is designed to showcase the application of Object Oriented Programming (OOP) principls in a tangible, real-world scenario using the Lego EV3 robotics kit and the LeJOS Java Library. This project involves building a robot capable of autonomously following a line on a track, detecting obstacles and avoiding them while staying on the path. 
+
+The Project integrates several key functionalities, including the use of ultrasonic sensors for object detection, color sensors, for line tracking, and motors for movement control. The robot is programmed to follow the track using precise timing techniques, handle obsracles by performing avoidance maneuvers, and return to the track seamlessly after detouring around obstracles. 
+
+in addition to the core functionality, the project emphasizes the importance of using threads for concurrent task management, allowing for smooth sensor data collection and motor control in parallel. The communication between these threads is implemented following best practices for thread synchronization. 
+
+The project is developed following programming practises, including clear code structure, modularity, and JavaDoc documentation. The group also have focused on documenting the process throght Jira and Confluence. 
+
+Overall, this project aims to reinforce key concepts of Object Oriented programming through practicle application, while also offering a fun and interactive way to learn about robotics and sensor integration. 
 
 ## Team Member roles
 > Madu - Scrum Master, Developer
