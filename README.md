@@ -50,17 +50,22 @@ git clone https://github.com/LIENPHAM-HAMK/LineRobotDML.git
 ## Sensors and Motors 
 > Ultrasonic Sensors : used for Object Detection <br>
 > Color Sensor       : Detects the line and changes in light intensity <br>
-> Motors             : Control the movement of the Robot <br> 1
+> Motors             : Control the movement of the Robot <br> 
 
 ### Line Following 
-The robot uses timing and sensor data to stay on the line and navigation obtracles. 
+Using a light sensor, the robot drives along a black line. Using the PID controller: the robot sticks to the right edge of the black stripe so that it scans both white and black at the same time. Added color filtering and error calculation to make the movement very smooth and not jerky.  
 
 ### Object Detection & Avoidance
-The robot detects objects and avoids them by turning and returning to the line. 
+Using the Ultrasonic Sensor, the robot can detect  obtracle in its path within a radius of 30 degrees. The robot begins to slow down gradually as it approaches the abject by 25cm. Approaching 20cm, the robot turns and begins to move in a arc around the obstracle. After leaving the black line, he starts constantly looking for it.  
 
 
 ### Thread Communication  
-Threads are used for managing sensor readings, and motor control concurrently. Communication between threads is handled suing shared variables and synchronization. 
+The robot has three threads. <br>
+Distance Thread continuously reads the distance using the Ulltrasonic Sensor. It uses Deceleration, rotation, and volume when needed. <br>
+Light thread constantly scans scans colors using the Light Sensor. Detects a Black line and switches th robot to follow mode. <br>
+Drive thread is responsible for controlling the speed of the motors. Uses the PID controller while following the line. During the passage of an obstacle, it controls the sped of the wheel, regulates deceleration /acceleration. <br>
+Threads are using shared variables to immediately see changes. 
+
 
 ## Project Time Line 
 ![sd_group_9_dml_2025-04-16_06 42pm](https://github.com/user-attachments/assets/7a898c34-cb2b-425c-b4ac-4027b5753b97)
